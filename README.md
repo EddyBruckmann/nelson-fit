@@ -25,6 +25,29 @@ Los entrenadores personales no escalan. Un coach humano no puede personalizar el
 
 ---
 
+## 📱 En Acción
+
+
+### "¿Qué me toca mañana?"
+
+Nelson lee la rutina, consulta el historial de cargas y arma la sesión completa con tips de ejecución.
+
+![image.png](attachment:3f2ad9fe-6c2b-4ab3-b5e2-053adc83cfd7:image.png)
+
+### Registro de cargas en vivo
+
+Conversación real registrando ejercicios serie por serie. Nelson trackea todo y responde con su personalidad.
+
+![image.png](attachment:ffa64741-da04-4f22-a7aa-f417d2cb4e1a:image.png)
+
+### "Toy yendo al gimnasio"
+
+Nelson detecta la asistencia, consulta el calendario y te tira la mejor onda.
+
+![image.png](attachment:3c0dee27-e14b-4bf9-b3d7-56dcd39eb1c0:image.png)
+
+---
+
 ## 🧠 Decisión de Diseño Central: Identidad Desacoplada
 
 La decisión arquitectónica más importante fue **separar la identidad del agente en tres componentes independientes**:
