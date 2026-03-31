@@ -1,3 +1,5 @@
+![Banner Image](assets/banner.png)
+
 # Nelson Fit — Personal AI Fitness Orchestrator
 
 > Un coach de fitness con IA que vive en tu WhatsApp. Conoce tu historial, se adapta a tu cuerpo y no te va a dejar saltear el día de piernas.
@@ -32,19 +34,19 @@ Los entrenadores personales no escalan. Un coach humano no puede personalizar el
 
 Nelson lee la rutina, consulta el historial de cargas y arma la sesión completa con tips de ejecución.
 
-![image.png](attachment:3f2ad9fe-6c2b-4ab3-b5e2-053adc83cfd7:image.png)
+![image.png](assets/rutina.jpeg)
 
 ### Registro de cargas en vivo
 
 Conversación real registrando ejercicios serie por serie. Nelson trackea todo y responde con su personalidad.
 
-![image.png](attachment:ffa64741-da04-4f22-a7aa-f417d2cb4e1a:image.png)
+![image.png](assets/traqueo.jpeg)
 
-### "Toy yendo al gimnasio"
+### "Registro de asistencia"
 
 Nelson detecta la asistencia, consulta el calendario y te tira la mejor onda.
 
-![image.png](attachment:3c0dee27-e14b-4bf9-b3d7-56dcd39eb1c0:image.png)
+![image.png](assets/asistencia.jpeg)
 
 ---
 
@@ -152,7 +154,7 @@ Toda la personalidad de Nelson — incluyendo jerga regional, estilo motivaciona
 
 **Eddy Bruckmann** — Montevideo, Uruguay
 
-- LinkedIn: *[]*
+- LinkedIn: https://www.linkedin.com/in/ebruckmann/
 - Email: edgardbruckmann@gmail.com
 
 ---

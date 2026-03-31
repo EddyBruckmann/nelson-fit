@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>README.md</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+html,footer,header{
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Custom MD PDF CSS
+ */
+html,footer,header{
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+
+ }
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+<link rel="stylesheet" href="file:///r%3A/2.Travail/1.Enseignement/Cours/_1.Outils/2.Developpement/1.SCSS/main.css" type="text/css"><link rel="stylesheet" href="file:///d%3A/rdaros/Cours/_1.Outils/2.Developpement/1.SCSS/main.css" type="text/css">
+</head>
+
+<body>
+    <p><img src="file:///c:/Users/edgar/OneDrive/Documentos/Proyectos/neslon-fit/nelson-fit/assets/banner.png" alt="Banner Image"></p>
+<h1 id="nelson-fit--personal-ai-fitness-orchestrator">Nelson Fit — Personal AI Fitness Orchestrator</h1>
+<blockquote>
+<p>Un coach de fitness con IA que vive en tu WhatsApp. Conoce tu historial, se adapta a tu cuerpo y no te va a dejar saltear el día de piernas.</p>
+</blockquote>
+<hr>
+<h2 id="%F0%9F%8E%AF-el-problema">🎯 El Problema</h2>
+<p>Los entrenadores personales no escalan. Un coach humano no puede personalizar el entrenamiento de decenas de clientes mientras trackea cada lesión, preferencia, progresión de carga y sesión perdida. La mayoría de los chatbots de fitness son sistemas de FAQ glorificados — no te <em>conocen</em>.</p>
+<p><strong>Nelson Fit</strong> es un agente de coaching de fitness completamente autónomo que opera a través de WhatsApp, mantiene memoria a largo plazo del usuario y se adapta proactivamente al contexto real.</p>
+<hr>
+<h2 id="%F0%9F%92%A1-qu%C3%A9-hace">💡 Qué Hace</h2>
+<ul>
+<li><strong>Coaching personalizado por WhatsApp</strong> — Responde en lenguaje natural con la jerga y el tono del usuario. Sin app que descargar, sin interfaz que aprender.</li>
+<li><strong>Tracking real de cargas</strong> — Cada serie, repetición y peso queda registrado. Nelson consulta los últimos 90 días de entrenamiento para ajustar la sesión de hoy basándose en progresión real, no en suposiciones.</li>
+<li><strong>Memoria a largo plazo</strong> — El agente clasifica los hechos sobre el usuario en rasgos permanentes y contexto temporal. Sabe que odiás correr en cinta. Sabe que el martes pasado te molestaba el hombro. Y sabe cuándo eso dejó de ser relevante.</li>
+<li><strong>Memoria autoregenerativa</strong> — Cuando información nueva entra en conflicto con hechos almacenados (ej: &quot;ya no me duele el hombro&quot;), el sistema detecta la inconsistencia y actualiza su memoria de forma autónoma. Sin limpieza manual.</li>
+<li><strong>Proactividad proporcional</strong> — Nelson chequea tu asistencia al gimnasio contra tu meta semanal y te escribe por WhatsApp si te estás quedando atrás. La urgencia del mensaje escala según qué tan cerca estés de no cumplir tu objetivo.</li>
+<li><strong>Lectura de rutina en tiempo real</strong> — Nelson accede a la rutina actual del usuario y sabe qué día de entrenamiento toca hoy. Te dice exactamente qué ejercicios hacer, en qué orden y con qué cargas, adaptándose al esquema de rotación configurado.</li>
+<li><strong>Consejos con fundamento</strong> — Usa RAG sobre una base de conocimientos curada (libros de fisiología del ejercicio, referencias de técnica) para que cada recomendación esté basada en evidencia, no alucinada.</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%93%B1-en-acci%C3%B3n">📱 En Acción</h2>
+<h3 id="%22%C2%BFqu%C3%A9-me-toca-ma%C3%B1ana%22">&quot;¿Qué me toca mañana?&quot;</h3>
+<p>Nelson lee la rutina, consulta el historial de cargas y arma la sesión completa con tips de ejecución.</p>
+<p><img src="file:///c:/Users/edgar/OneDrive/Documentos/Proyectos/neslon-fit/nelson-fit/assets/rutina.jpeg" alt="image.png"></p>
+<h3 id="registro-de-cargas-en-vivo">Registro de cargas en vivo</h3>
+<p>Conversación real registrando ejercicios serie por serie. Nelson trackea todo y responde con su personalidad.</p>
+<p><img src="file:///c:/Users/edgar/OneDrive/Documentos/Proyectos/neslon-fit/nelson-fit/assets/traqueo.jpeg" alt="image.png"></p>
+<h3 id="%22registro-de-asistencia%22">&quot;Registro de asistencia&quot;</h3>
+<p>Nelson detecta la asistencia, consulta el calendario y te tira la mejor onda.</p>
+<p><img src="file:///c:/Users/edgar/OneDrive/Documentos/Proyectos/neslon-fit/nelson-fit/assets/asistencia.jpeg" alt="image.png"></p>
+<hr>
+<h2 id="%F0%9F%A7%A0-decisi%C3%B3n-de-dise%C3%B1o-central-identidad-desacoplada">🧠 Decisión de Diseño Central: Identidad Desacoplada</h2>
+<p>La decisión arquitectónica más importante fue <strong>separar la identidad del agente en tres componentes independientes</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Rol</th>
+<th>Mutabilidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Personalidad</strong></td>
+<td>Define <em>quién es</em> el agente — voz, tono, estilo de comunicación</td>
+<td>Cambia raramente</td>
+</tr>
+<tr>
+<td><strong>Perfil de Usuario</strong></td>
+<td>Define <em>quién es el usuario</em> — rasgos estáticos como altura, equipamiento, nivel de experiencia</td>
+<td>Baja frecuencia</td>
+</tr>
+<tr>
+<td><strong>Memoria Viva</strong></td>
+<td>Almacena <em>qué está pasando</em> — lesiones, rutina actual, preferencias descubiertas en conversación</td>
+<td>Actualización continua</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Por qué importa:</strong> Cada componente evoluciona de forma independiente. Cambiar la personalidad del agente no borra datos del usuario. Actualizar las estadísticas del usuario no afecta el estilo de comunicación. La memoria crece y se autolimpia sin tocar los otros dos componentes. Esto elimina la necesidad de reentrenar o reconfigurar el sistema a medida que evoluciona.</p>
+<hr>
+<h2 id="%F0%9F%8F%97%EF%B8%8F-arquitectura-general">🏗️ Arquitectura General</h2>
+<p>Nelson opera sobre tres capas de inteligencia:</p>
+<h3 id="1-capa-de-conocimiento-rag">1. Capa de Conocimiento (RAG)</h3>
+<p>Una base de conocimientos curada indexada con embeddings vectoriales. El agente recupera contexto relevante antes de generar cualquier consejo, asegurando que las respuestas estén fundamentadas en ciencia real del ejercicio — no en confabulación del LLM.</p>
+<h3 id="2-capa-de-datos-log-de-entrenamiento--rutina">2. Capa de Datos (Log de Entrenamiento + Rutina)</h3>
+<p>Todos los datos de ejercicios se almacenan en una base de datos estructurada. El agente consulta datos históricos para tomar decisiones informadas sobre progresión de carga, ajustes de volumen y recomendaciones de recuperación. Además, lee la rutina actual del usuario para saber qué día de entrenamiento corresponde y qué ejercicios programar en cada sesión.</p>
+<h3 id="3-capa-proactiva-motor-de-accountability">3. Capa Proactiva (Motor de Accountability)</h3>
+<p>Un sistema programado monitorea la asistencia al gimnasio vía eventos de calendario y calcula si el usuario va encaminado a su meta semanal. Si no, genera un mensaje motivacional calibrado al nivel de urgencia (empujón suave a mitad de semana vs. &quot;tenés que ir hoy&quot; el sábado).</p>
+<pre class="hljs"><code><div>┌─────────────┐
+│  WhatsApp    │◄──────►┌──────────────────────┐
+└─────────────┘        │   Motor de            │
+                       │   Orquestación        │
+                       │                      │
+                       │  ┌─────────────────┐  │
+                       │  │ Agente Principal │  │
+                       │  │ (Coaching)       │  │
+                       │  └────────┬────────┘  │
+                       │           │           │
+                       │  ┌────────┴────────┐  │
+                       │  │ Agente de       │  │
+                       │  │ Accountability  │  │
+                       │  └─────────────────┘  │
+                       └───────────┬───────────┘
+                                   │
+              ┌────────────────────┼────────────────────┐
+              │                    │                    │
+     ┌────────▼───────┐  ┌────────▼───────┐  ┌────────▼───────┐
+     │  Identidad      │  │  Conocimiento  │  │  Datos         │
+     │  (3 componentes)│  │  (Vector DB)   │  │  (Log de       │
+     │                 │  │                │  │   Entrenamiento)│
+     └─────────────────┘  └────────────────┘  └────────────────┘
+</div></code></pre>
+<hr>
+<h2 id="%F0%9F%94%91-desaf%C3%ADos-de-ingenier%C3%ADa-resueltos">🔑 Desafíos de Ingeniería Resueltos</h2>
+<h3 id="memoria-que-olvida-a-prop%C3%B3sito">Memoria que olvida a propósito</h3>
+<p>La mayoría de los sistemas de memoria de agentes solo acumulan. Nelson implementa un <strong>patrón de destilación de hechos</strong> que clasifica la información por permanencia y resuelve activamente conflictos entre hechos viejos y nuevos. Esto mantiene la ventana de contexto limpia y el entendimiento del agente actualizado.</p>
+<h3 id="proactividad-proporcional">Proactividad proporcional</h3>
+<p>El sistema de accountability no solo molesta — calcula. Un chequeo simple el lunes resulta en silencio. Una sesión perdida el viernes dispara un mensaje más fuerte. ¿Sábado con cero visitas? Máxima urgencia. La lógica se adapta dinámicamente a la meta semanal del usuario.</p>
+<h3 id="embeddings-locales-en-hardware-limitado">Embeddings locales en hardware limitado</h3>
+<p>Los embeddings vectoriales corren en una Raspberry Pi, manteniendo los costos en cero y los datos completamente locales. Esto requirió una selección cuidadosa de modelos de embeddings optimizados para entornos de bajos recursos.</p>
+<h3 id="personalidad-como-configuraci%C3%B3n-no-como-entrenamiento">Personalidad como configuración, no como entrenamiento</h3>
+<p>Toda la personalidad de Nelson — incluyendo jerga regional, estilo motivacional y preferencias de comunicación — está definida como un archivo de configuración en runtime, no embebida en los pesos del modelo. Cambiar cómo habla Nelson requiere editar un documento, no reentrenar un modelo.</p>
+<hr>
+<h2 id="%F0%9F%93%8A-resultados">📊 Resultados</h2>
+<ul>
+<li><strong>En uso diario</strong> como mi coach de fitness personal desde el despliegue inicial.</li>
+<li><strong>Cero consejos de ejercicio alucinados</strong> — la recuperación por RAG asegura respuestas fundamentadas.</li>
+<li><strong>Experiencia fluida en WhatsApp</strong> — Sin fricción, sin cambiar de app. Las conversaciones se sienten naturales.</li>
+<li><strong>Precisión de memoria</strong> — El agente recuerda correctamente preferencias, historial de lesiones y contexto de rutina entre sesiones, sin repetición ni pérdida de datos.</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%9B%A0%EF%B8%8F-categor%C3%ADas-de-tecnolog%C3%ADa">🛠️ Categorías de Tecnología</h2>
+<ul>
+<li><strong>Orquestación:</strong> Motor de automatización de workflows</li>
+<li><strong>LLMs:</strong> Modelos livianos optimizados para velocidad y costo</li>
+<li><strong>Embeddings:</strong> Generación vectorial local en hardware edge</li>
+<li><strong>Vector Store:</strong> Base de datos vectorial basada en PostgreSQL</li>
+<li><strong>Almacenamiento de Datos:</strong> Base de datos estructurada para logs de entrenamiento</li>
+<li><strong>Integración de Calendario:</strong> Tracking de asistencia y scheduling</li>
+<li><strong>Mensajería:</strong> API de WhatsApp Business</li>
+<li><strong>Memoria:</strong> Ventana deslizante + almacén de hechos a largo plazo</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%93%AC-contacto">📬 Contacto</h2>
+<p><strong>Eddy Bruckmann</strong> — Montevideo, Uruguay</p>
+<ul>
+<li>LinkedIn: https://www.linkedin.com/in/ebruckmann/</li>
+<li>Email: edgardbruckmann@gmail.com</li>
+</ul>
+<hr>
+<p><em>Nelson Fit es un sistema propietario. Este repositorio documenta el diseño y las capacidades del proyecto. El código fuente y los detalles de implementación no están disponibles públicamente.</em></p>
+<p><em>¿Te interesa esto para tu gimnasio o negocio de coaching? Hablemos.</em></p>
+
+</body>
+
+</html>
