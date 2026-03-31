@@ -34,15 +34,17 @@ Los entrenadores personales no escalan. Un coach humano no puede personalizar el
 
 Nelson lee la rutina, consulta el historial de cargas y arma la sesión completa con tips de ejecución.
 <p align="center">
-<img src="assets/rutina.jpeg" width="65%" alt="Orquestación de Rutina">
+<img src="assets/rutina.jpeg" width="80%" alt="Orquestación de Rutina">
 </p>
+
 ### Registro de cargas en vivo
 
 Conversación real registrando ejercicios serie por serie. Nelson trackea todo y responde con su personalidad.
 <p align="center">
 <img src="assets/traqueo.jpeg" width="25%" alt="Registro de Cargas">
 </p>
-### "Registro de asistencia"
+
+### Registro de asistencia
 
 Nelson detecta la asistencia, consulta el calendario y te tira la mejor onda.
 <p align="center">
