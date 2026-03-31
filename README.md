@@ -33,22 +33,22 @@ Los entrenadores personales no escalan. Un coach humano no puede personalizar el
 ### "¿Qué me toca mañana?"
 
 Nelson lee la rutina, consulta el historial de cargas y arma la sesión completa con tips de ejecución.
-
-![image.png](assets/rutina.jpeg)
-
+<p align="center">
+<img src="assets/rutina.jpeg" width="65%" alt="Orquestación de Rutina">
+</p>
 ### Registro de cargas en vivo
 
 Conversación real registrando ejercicios serie por serie. Nelson trackea todo y responde con su personalidad.
-
-![image.png](assets/traqueo.jpeg)
-
+<p align="center">
+<img src="assets/traqueo.jpeg" width="25%" alt="Registro de Cargas">
+</p>
 ### "Registro de asistencia"
 
 Nelson detecta la asistencia, consulta el calendario y te tira la mejor onda.
+<p align="center">
+<img src="assets/asistencia.jpeg" width="65%" alt="Agencia Proactiva">
+</p>
 
-![image.png](assets/asistencia.jpeg)
-
----
 
 ## 🧠 Decisión de Diseño Central: Identidad Desacoplada
 
